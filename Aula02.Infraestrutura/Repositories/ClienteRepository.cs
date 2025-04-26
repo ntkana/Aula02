@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 using Aula02.Domain.Interfaces;
 using Aula02.Domain.Models;
 using Aula02.Infraestrutura.Data;
