@@ -1,4 +1,3 @@
-using Aula02.Aplicacao.Service;
 using Aula02.Application.Services;
 using Aula02.Domain.Interfaces;
 using Aula02.Infraestrutura.Data;

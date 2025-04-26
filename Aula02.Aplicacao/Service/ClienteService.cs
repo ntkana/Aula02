@@ -16,7 +16,7 @@ namespace Aula02.Application.Services
         {
             try
             {
-                Cliente cliente = await _clienteRepository.RetornaClientePorIdAsync(pCliente.Id);
+                Cliente cliente = await _clienteRepository.RetornarClientePorIdAsync(pCliente.Id);
 
                 if (cliente == null)
                     return false;
@@ -52,12 +52,12 @@ namespace Aula02.Application.Services
         {
             try
             {
-                Cliente cliente = await _clienteRepository.RetornaClientePorIdAsync(pId);
+                Cliente cliente = await _clienteRepository.RetornarClientePorIdAsync(pId);
 
                 if (cliente == null)
                     return false;
 
-                await _clienteRepository.ExcluirClienteAsync(cliente);
+                await _clienteRepository.ExcluirClienteAsync(cliente.Id);
                 return true;
             }
             catch (Exception)
@@ -70,7 +70,7 @@ namespace Aula02.Application.Services
         {
             try
             {
-                Cliente cliente = await _clienteRepository.RetornaClientePorIdAsync(pId);
+                Cliente cliente = await _clienteRepository.RetornarClientePorIdAsync(pId);
                 if (cliente == null)
                     return null;
 
@@ -86,7 +86,7 @@ namespace Aula02.Application.Services
         {
             try
             {
-                IEnumerable<Cliente> clientes = await _clienteRepository.RetornaTodosClientesAsync();
+                IEnumerable<Cliente> clientes = await _clienteRepository.RetornarTodosClientesAsync();
 
                 return clientes;
             }
