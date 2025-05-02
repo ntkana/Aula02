@@ -8,6 +8,6 @@ namespace Aula02.Domain.Interfaces
         Task<IEnumerable<Cliente>> RetornarTodosClientesAsync();
         Task CriarClienteAsync(Cliente pCliente);
         Task AtualizarClienteAsync(Cliente pCliente);
-        Task ExcluirClienteAsync(int pId);
+        Task ExcluirClienteAsync(Cliente pCliente);
     }
 }

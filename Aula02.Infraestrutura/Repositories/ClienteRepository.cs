@@ -26,9 +26,9 @@ namespace Aula02.Infraestrutura.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task ExcluirClienteAsync(int pId)
+        public async Task ExcluirClienteAsync(Cliente pCliente)
         {
-            _context.Clientes.Remove(new Cliente { Id = pId });
+            _context.Clientes.Remove(pCliente);
             await _context.SaveChangesAsync();
         }
 

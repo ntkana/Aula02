@@ -57,7 +57,7 @@ namespace Aula02.Application.Services
                 if (cliente == null)
                     return false;
 
-                await _clienteRepository.ExcluirClienteAsync(cliente.Id);
+                await _clienteRepository.ExcluirClienteAsync(cliente);
                 return true;
             }
             catch (Exception)
